@@ -35,6 +35,11 @@ import BaseTable from "@/components/BaseTable";
 import BaseTableRow from "@/components/BaseTableRow";
 import BaseRowJails from "@/components/BaseRowJail";
 
+/**
+ * TODO: Можно заюзать из репозитория
+ * методы тестового задания для преобразования
+ * юбого объекта под таблицы
+ */
 export default {
   name: 'App',
   components: {

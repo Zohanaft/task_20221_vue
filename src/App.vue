@@ -1,17 +1,68 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <base-table :rows="rows">8
+      <template #rows="{ row }">
+        <base-table-row :row="row.jails">
+          <template #row="{ jails }">
+            <base-row-jails
+              :jails="jails"
+              :elipsis="true"
+            >
+              <template #status="{ jail }">
+                {{ jail }}
+              </template>
+              <template #name="{ jail }">
+                {{ jail }}
+              </template>
+              <template #createdAt="{ jail }">
+                {{ jail }}
+              </template>
+              <template #index="{ jail }">
+                <div class="d-flex table-index justify-content-center align-center ml-3">
+                  {{ jail }}
+                </div>
+              </template>
+            </base-row-jails>
+          </template>
+        </base-table-row>
+      </template>
+    </base-table>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import BaseTable from "@/components/BaseTable";
+import BaseTableRow from "@/components/BaseTableRow";
+import BaseRowJails from "@/components/BaseRowJail";
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    BaseTable,
+    BaseTableRow,
+    BaseRowJails,
+  },
+  data() {
+    return {
+      rows: [
+        {
+          jails: [
+            { index: 1 },
+            { status: 'pending' },
+            { name: "Andrew j." },
+            { createdAt: new Date().toLocaleString() }
+          ],
+        },
+        {
+          jails: [
+            { index: 1 },
+            { status: 'pending' },
+            { name: "Andrew j." },
+            { createdAt: new Date().toLocaleString() }
+          ],
+        },
+      ]
+    }
   }
 }
 </script>
@@ -24,5 +75,29 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+.d-block {
+  display: block;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.table-index {
+  min-width: 1.3rem;
+  min-height: 1.3rem;
+  border-radius: 1.3rem;
+  background: #2c3e50;
+  color: white;
 }
 </style>

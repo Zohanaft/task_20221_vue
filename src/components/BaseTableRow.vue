@@ -20,9 +20,5 @@ export default {
 }
 </script>
 
-<style lang="scss">
-.row  {
-  display: flex;
-  flex-wrap: nowrap;
-}
+<style lang="scss" scoped>
 </style>

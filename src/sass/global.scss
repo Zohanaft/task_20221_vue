@@ -1,1 +1,46 @@
 @import '../../node_modules/scss-reset/reset';
+
+.d-block {
+  display: block;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.badge {
+  display: block;
+  width: 1.2rem;
+  height: 1.2rem;
+  min-width: 1.2rem;
+  min-height: 1.2rem;
+  max-width: 1.2rem;
+  max-height: 1.2rem;
+  border-radius: 1.2rem;
+}
+
+.ellipsis {
+  word-break: normal;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.jail {
+  flex: 1 0 auto;
+  justify-content: flex-start;
+  display: flex;
+  padding: 0 $gutters;
+}

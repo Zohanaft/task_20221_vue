@@ -19,7 +19,7 @@
                 />
               </template>
               <template #name="{ jail }">
-                {{ jail }}
+                <span class="text-uppercase">{{ jail }}</span>
               </template>
               <template #createdAt="{ jail }">
                 {{ jail }}
@@ -83,28 +83,12 @@ export default {
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: Arial, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
-}
-
-.d-block {
-  display: block;
-}
-
-.d-flex {
-  display: flex;
-}
-
-.justify-content-center {
-  justify-content: center;
-}
-
-.align-center {
-  align-items: center;
 }
 
 .table-index {
@@ -113,5 +97,10 @@ export default {
   border-radius: 1.3rem;
   background: #2c3e50;
   color: white;
+}
+
+.row  {
+  display: flex;
+  flex-wrap: nowrap;
 }
 </style>

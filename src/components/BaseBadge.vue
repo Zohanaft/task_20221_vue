@@ -15,7 +15,7 @@ export default {
   props: {
     badgeOptions: Object,
     status: String,
-    colors: Array
+    colors: Object
   },
   data() {
     return {

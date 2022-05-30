@@ -6,7 +6,7 @@
           <template #row="{ jails }">
             <base-row-jails
               :jails="jails"
-              :elipsis="true"
+              :ellipsis="true"
             >
               <template #status="{ jail }">
                 <base-badge

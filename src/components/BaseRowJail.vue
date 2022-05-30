@@ -2,7 +2,7 @@
   <div
     class="jail"
     :class="{
-      elipsis
+      ellipsis
     }"
   >
     <slot
@@ -18,7 +18,7 @@ export default {
   name: "BaseRowJails",
   props: {
     jails: Object,
-    elipsis: {
+    ellipsis: {
       type: Boolean,
       default: false
     },
@@ -36,5 +36,12 @@ export default {
   flex: 1 0 auto;
   justify-content: flex-start;
   display: flex;
+}
+
+.ellipsis {
+  word-break: normal;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 </style>

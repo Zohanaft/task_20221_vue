@@ -2,7 +2,8 @@
   <div
     class="badge"
     :style="{
-      ...badgeOptions
+      ...badgeOptions,
+      backgroundColor: colors[status]
     }"
   >
   </div>
@@ -13,7 +14,8 @@ export default {
   name: "BaseBadge",
   props: {
     badgeOptions: Object,
-    status: String
+    status: String,
+    colors: Array
   },
   data() {
     return {
@@ -25,11 +27,12 @@ export default {
 <style lang="scss" scoped>
 .badge {
   display: block;
-  width: 1rem;
-  height: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-  max-width: 1rem;
-  max-height: 1rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  min-width: 1.2rem;
+  min-height: 1.2rem;
+  max-width: 1.2rem;
+  max-height: 1.2rem;
+  border-radius: 1.2rem;
 }
 </style>

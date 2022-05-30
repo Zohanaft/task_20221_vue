@@ -9,7 +9,14 @@
               :elipsis="true"
             >
               <template #status="{ jail }">
-                {{ jail }}
+                <base-badge
+                  :status="jail"
+                  :colors="{
+                    'approved': 'green',
+                    'pending': 'orange',
+                    'reject': 'red'
+                  }"
+                />
               </template>
               <template #name="{ jail }">
                 {{ jail }}
@@ -34,6 +41,7 @@
 import BaseTable from "@/components/BaseTable";
 import BaseTableRow from "@/components/BaseTableRow";
 import BaseRowJails from "@/components/BaseRowJail";
+import BaseBadge from "@/components/BaseBadge";
 
 /**
  * TODO: Можно заюзать из репозитория
@@ -43,6 +51,7 @@ import BaseRowJails from "@/components/BaseRowJail";
 export default {
   name: 'App',
   components: {
+    BaseBadge,
     BaseTable,
     BaseTableRow,
     BaseRowJails,

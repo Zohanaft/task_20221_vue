@@ -2,7 +2,7 @@
   <div id="app">
     <base-table :rows="rows">8
       <template #rows="{ row }">
-        <base-table-row class="my-3" :row="row.jails">
+        <base-table-row class="my-1" :row="row.jails">
           <template #row="{ jails }">
             <base-row-jails
               :jails="jails"
@@ -46,7 +46,7 @@ import BaseBadge from "@/components/BaseBadge";
 /**
  * TODO: Можно заюзать из репозитория
  * методы тестового задания для преобразования
- * юбого объекта под таблицы
+ * любого объекта под таблицы
  */
 export default {
   name: 'App',

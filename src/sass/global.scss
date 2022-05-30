@@ -44,3 +44,49 @@
   display: flex;
   padding: 0 $gutters;
 }
+
+@for $i from 1 through $gutter-steps-length {
+  .ma-#{$i} {
+    margin: #{$gutter-step * $i};
+  }
+  .mx-#{$i} {
+    margin: 0 #{$gutter-step * $i};
+  }
+  .my-#{$i} {
+    margin: #{$gutter-step * $i} 0;
+  }
+  .ml-#{$i} {
+    margin-left: #{$gutter-step * $i};
+  }
+  .mr-#{$i} {
+    margin-right: #{$gutter-step * $i};
+  }
+  .mt-#{$i} {
+    margin-top: #{$gutter-step * $i};
+  }
+  .mb-#{$i} {
+    margin-bottom: #{$gutter-step * $i};
+  }
+
+  .pa-#{$i} {
+    padding: #{$gutter-step * $i};
+  }
+  .px-#{$i} {
+    padding: 0 #{$gutter-step * $i};
+  }
+  .py-#{$i} {
+    padding: #{$gutter-step * $i} 0;
+  }
+  .pl-#{$i} {
+    padding-left: #{$gutter-step * $i};
+  }
+  .pr-#{$i} {
+    padding-right: #{$gutter-step * $i};
+  }
+  .pt-#{$i} {
+    padding-top: #{$gutter-step * $i};
+  }
+  .pb-#{$i} {
+    padding-bottom: #{$gutter-step * $i};
+  }
+}

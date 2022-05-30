@@ -2,7 +2,7 @@
   <div id="app">
     <base-table :rows="rows">8
       <template #rows="{ row }">
-        <base-table-row :row="row.jails">
+        <base-table-row class="my-3" :row="row.jails">
           <template #row="{ jails }">
             <base-row-jails
               :jails="jails"

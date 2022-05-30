@@ -1,6 +1,5 @@
 <template>
   <div class="row">
-    <slot></slot>
     <slot
       v-for="(jails) in row"
       name="row"
